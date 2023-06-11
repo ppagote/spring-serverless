@@ -1,4 +1,4 @@
-package com.pranav.springserverless.service;
+package com.pranav.springserverless.functions;
 
 import com.pranav.springserverless.entity.Book;
 import com.pranav.springserverless.repository.BookRepository;

@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class BookRepository {
 
-    private static List<Book> bookList = new ArrayList<>();
+    private static final List<Book> bookList = new ArrayList<>();
 
     static {
         bookList.add(Book.builder().id("1").name("Pranav").build());

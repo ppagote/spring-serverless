@@ -1,18 +1,19 @@
-package com.pranav.springserverless.service;
+package com.pranav.springserverless.functions;
 
 import com.pranav.springserverless.entity.Book;
 import com.pranav.springserverless.repository.BookRepository;
 import lombok.AllArgsConstructor;
 
-import java.util.function.Function;
+import java.util.List;
+import java.util.function.Supplier;
 
 @AllArgsConstructor
-public class AddBook implements Function<Book, String> {
+public class GetAllBooks implements Supplier<List<Book>> {
 
     private final BookRepository repository;
 
     @Override
-    public String apply(Book book) {
-        return repository.addBook(book);
+    public List<Book> get() {
+        return repository.allBooks();
     }
 }
